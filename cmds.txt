@@ -1,0 +1,11 @@
+Sequential:
+gcc mandelbrot-sequential.c -o mandelbrot-sequential.o
+./mandelbrot-sequential.o
+
+Static MPI:
+mpicc mandelbrot-static.c -o mandelbrot-static.o
+mpirun -np 8 ./mandelbrot-static.o
+
+Dynamic MPI:
+mpicc mandelbrot-dynamic.c -o mandelbrot-dynamic.o
+mpirun -np 8 ./mandelbrot-dynamic.o
